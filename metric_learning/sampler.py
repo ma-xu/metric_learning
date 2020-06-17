@@ -32,6 +32,7 @@ class ClassBalancedBatchSampler(object):
     def sample_batch(self):
         # Real batch size is self.images_per_class * (self.batch_size // self.images_per_class)
         num_classes = self.batch_size // self.images_per_class
+        print("num_classes: {}".format(num_classes))
         sampled_classes = np.random.choice(self.reverse_index.keys(),
                                            num_classes,
                                            replace=False)
