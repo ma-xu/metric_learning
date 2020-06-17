@@ -174,6 +174,7 @@ def main():
 
     log_every_n_step = 10
     for epoch in range(args.pretrain_epochs):
+        print(epoch)
         for i, (im, _, instance_label, index) in enumerate(train_loader):
             data = time.time()
             opt.zero_grad()
