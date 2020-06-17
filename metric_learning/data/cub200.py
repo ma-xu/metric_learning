@@ -84,6 +84,7 @@ class Cub200(Dataset):
                 meta_data['class_names'][int(row[0])] = row[1]
 
         self.class_names = meta_data['class_names']
+        print("meta_data: {}".format(meta_data))
         return meta_data
 
     def _load_split(self, meta_data, benchmark=True):
