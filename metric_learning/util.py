@@ -15,7 +15,7 @@ class SimpleLogger(object):
         ZERO_BUFFER_SIZE = 0  # immediately flush logs
 
 
-        self.log = open(logfile, 'a+', ZERO_BUFFER_SIZE)
+        self.log = open(logfile, 'a', 1)
         # self.log = open(logfile, 'r', ZERO_BUFFER_SIZE)
         self.terminal = terminal
 
