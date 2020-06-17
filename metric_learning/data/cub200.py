@@ -38,6 +38,7 @@ class Cub200(Dataset):
 
         # load train/test split
         instance_id_to_load = self._load_split(meta_data, benchmark=self.benchmark)
+        print(instance_id_to_load)
 
         self.class_map = {}
         self.instance_map = {}
