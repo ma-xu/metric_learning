@@ -14,8 +14,9 @@ class SimpleLogger(object):
     def __init__(self, logfile, terminal):
         ZERO_BUFFER_SIZE = 0  # immediately flush logs
 
-        # self.log = open(logfile, 'a', ZERO_BUFFER_SIZE)
-        self.log = open(logfile, 'r', ZERO_BUFFER_SIZE)
+
+        self.log = open(logfile, 'a', ZERO_BUFFER_SIZE)
+        # self.log = open(logfile, 'r', ZERO_BUFFER_SIZE)
         self.terminal = terminal
 
     def write(self, message):
