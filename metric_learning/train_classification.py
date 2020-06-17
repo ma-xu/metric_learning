@@ -50,7 +50,7 @@ def parse_args():
     parser.add_argument("--epochs_per_step", type=int, default=4, help="Epochs for learning rate step")
     parser.add_argument("--pretrain_epochs", type=int, default=1, help="Epochs for pretraining")
     parser.add_argument("--num_steps", type=int, default=3, help="Num steps to take")
-    parser.add_argument("--output", type=str, default="/data1/output", help="The output folder for training")
+    parser.add_argument("--output", type=str, default="/output", help="The output folder for training")
 
     return parser.parse_args()
 
