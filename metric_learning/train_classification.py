@@ -20,8 +20,8 @@ from data import Cub200
 from util import SimpleLogger
 from sampler import ClassBalancedBatchSampler
 
-import metric_learning.modules.featurizer as featurizer
-import metric_learning.modules.losses as losses
+import modules.featurizer as featurizer
+import modules.losses as losses
 
 from extract_features import extract_feature
 from evaluation.retrieval import evaluate_float_binary_embedding_faiss
