@@ -102,21 +102,21 @@ def main():
 
     # Setup dataset
     if args.dataset == 'StanfordOnlineProducts':
-        train_dataset = StanfordOnlineProducts('/data1/data/stanford_products/Stanford_Online_Products',
+        train_dataset = StanfordOnlineProducts('/home/g1007540910/DATA/MetricLearning/stanford_products/Stanford_Online_Products',
                                                transform=train_transform)
-        eval_dataset = StanfordOnlineProducts('/data1/data/stanford_products/Stanford_Online_Products',
+        eval_dataset = StanfordOnlineProducts('/home/g1007540910/DATA/MetricLearning/stanford_products/Stanford_Online_Products',
                                               train=False,
                                               transform=eval_transform)
     elif args.dataset == 'Cars196':
-        train_dataset = Cars196('/data1/data/cars196', transform=train_transform)
-        eval_dataset = Cars196('/data1/data/cars196', train=False, transform=eval_transform)
+        train_dataset = Cars196('/home/g1007540910/DATA/MetricLearning/cars196', transform=train_transform)
+        eval_dataset = Cars196('/home/g1007540910/DATA/MetricLearning/cars196', train=False, transform=eval_transform)
     elif args.dataset == 'Cub200':
-        train_dataset = Cub200('/data1/data/cub200/CUB_200_2011', transform=train_transform)
-        eval_dataset = Cub200('/data1/data/cub200/CUB_200_2011', train=False, transform=eval_transform)
+        train_dataset = Cub200('/home/g1007540910/DATA/MetricLearning/cub200/CUB_200_2011', transform=train_transform)
+        eval_dataset = Cub200('/home/g1007540910/DATA/MetricLearning/cub200/CUB_200_2011', train=False, transform=eval_transform)
     elif args.dataset == "InShop":
-        train_dataset = InShop('/data1/data/inshop', transform=train_transform)
-        query_dataset = InShop('/data1/data/inshop', train=False, query=True, transform=eval_transform)
-        index_dataset = InShop('/data1/data/inshop', train=False, query=False, transform=eval_transform)
+        train_dataset = InShop('/home/g1007540910/DATA/MetricLearning/inshop', transform=train_transform)
+        query_dataset = InShop('/home/g1007540910/DATA/MetricLearning/inshop', train=False, query=True, transform=eval_transform)
+        index_dataset = InShop('/home/g1007540910/DATA/MetricLearning/inshop', train=False, query=False, transform=eval_transform)
     else:
         print("Dataset {} is not supported yet... Abort".format(args.dataset))
         return
