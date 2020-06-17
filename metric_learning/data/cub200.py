@@ -8,7 +8,6 @@ from dataset import Dataset
 class Cub200(Dataset):
     def __init__(self, root, train=True, transform=None, benchmark=True):
         self.image_id_2_relfile = os.path.join(root, 'images.txt')
-        print(self.image_id_2_relfile)
         self.image_id_2_cls_id_file = os.path.join(root, 'image_class_labels.txt')
         self.class_name_file = os.path.join(root, 'classes.txt')
         self.benchmark = benchmark
