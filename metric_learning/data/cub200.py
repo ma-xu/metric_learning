@@ -89,12 +89,8 @@ class Cub200(Dataset):
     def _load_split(self, meta_data, benchmark=True):
         split_file = 'cub_{}_{}_cls_split.txt'.format('benchmark' if benchmark else 'random',
                                                       'train' if self.train else 'test')
-        print("split_file: {}".format(split_file))
         split = os.path.join(self.root, split_file)
-        print("split: {}".format(split))
-        print("os.path.getsize(split): {}".format(os.path.getsize(split)))
         if (not os.path.exists(split)) or (os.path.getsize(split)==0):
-            print("not exist")
             # split the classes into 50:50 train:test split
 
             num_total_classes = len(meta_data['class_names'])
