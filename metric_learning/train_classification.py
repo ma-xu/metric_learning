@@ -1,5 +1,6 @@
 import os
 import sys
+import traceback
 
 import time
 from itertools import chain
@@ -255,4 +256,11 @@ def main():
                                                       k=1000, gpu_id=0)
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(e)
+        traceback.print_exc()
+        os.system("sudo poweroff")
+    print("DONE, FINISHED!!!")
+    os.system("sudo poweroff")
