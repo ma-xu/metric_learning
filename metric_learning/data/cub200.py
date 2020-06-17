@@ -121,8 +121,9 @@ if __name__ == '__main__':
 
     train_set = Cub200('/home/g1007540910/DATA/MetricLearning/cub200/CUB_200_2011')
     for i in random.sample(range(0,len(train_set)), 5):
-        image_id, class_id, instance_id = train_set[i]
         print("rain_set[i]: {}".format(train_set[i]))
+        image_id, class_id, instance_id = train_set[i]
+
         print( "Image  {} has label {}, name {}".format(train_set.image_paths[i], instance_id, train_set.instance_names[instance_id]))
 
     test_set = Cub200('/home/g1007540910/DATA/MetricLearning/cub200/CUB_200_2011', train=False)
