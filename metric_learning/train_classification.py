@@ -33,7 +33,7 @@ def parse_args():
     """
     parser = ArgumentParser(description="PyTorch metric learning training script")
     # Optional arguments for the launch helper
-    parser.add_argument("--dataset", type=str, default="StanfordOnlineProducts",
+    parser.add_argument("--dataset", type=str, default="Cub200",
                         help="The dataset for training")
     parser.add_argument("--dataset_root", type=str, default="",
                         help="The root directory to the dataset")

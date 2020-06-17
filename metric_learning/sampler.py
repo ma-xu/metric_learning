@@ -36,7 +36,6 @@ class ClassBalancedBatchSampler(object):
                                            replace=False)
         sampled_indices = []
         for cls in sampled_classes:
-            print("cls: {}".format(cls))
             # Need replace = True for datasets with non-uniform distribution of images per class
             sampled_indices.extend(np.random.choice(self.reverse_index[cls],
                                                     self.images_per_class,
