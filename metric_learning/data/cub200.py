@@ -43,6 +43,7 @@ class Cub200(Dataset):
         self.instance_map = {}
 
         for image_id, instance_id in meta_data['id2cls'].items():
+            print("image_id: {} \t instance_id: {}".format(image_id,instance_id))
 
             if str(instance_id) not in instance_id_to_load:
                 continue
