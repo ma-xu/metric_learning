@@ -17,8 +17,8 @@ from data import InShop
 from data import StanfordOnlineProducts
 from data import Cars196
 from data import Cub200
-from .util import SimpleLogger
-from .sampler import ClassBalancedBatchSampler
+from util import SimpleLogger
+from sampler import ClassBalancedBatchSampler
 
 import metric_learning.modules.featurizer as featurizer
 import metric_learning.modules.losses as losses
