@@ -107,7 +107,7 @@ class Cub200(Dataset):
 
             with open(os.path.join(self.root,
                                    'cub_{}_train_cls_split.txt'.format('benchmark' if benchmark else 'random'))
-                    , 'wb') as wf:
+                    , 'w') as wf:
                 for i in shuffled_idxs[:num_total_classes//2]:
                     # make the class id 1-indexed to be consistent with the dataset
                     wf.write(str(i+1) + '\n')
