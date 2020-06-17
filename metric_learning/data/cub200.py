@@ -92,7 +92,8 @@ class Cub200(Dataset):
         print("split_file: {}".format(split_file))
         split = os.path.join(self.root, split_file)
         print("split: {}".format(split))
-        if not os.path.exists(split) or os.path.getsize(split):
+        print("os.path.getsize(split): {}".format(os.path.getsize(split)))
+        if (not os.path.exists(split)) or os.path.getsize(split):
             print("not exist")
             # split the classes into 50:50 train:test split
 
