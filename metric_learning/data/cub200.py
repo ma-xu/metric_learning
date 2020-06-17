@@ -2,7 +2,7 @@ import os.path
 import random
 import csv
 
-from dataset import Dataset
+from .dataset import Dataset
 
 
 class Cub200(Dataset):

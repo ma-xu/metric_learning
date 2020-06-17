@@ -2,7 +2,7 @@ import os.path
 import random
 from scipy.io import loadmat
 
-from dataset import Dataset
+from .dataset import Dataset
 
 
 class Cars196(Dataset):

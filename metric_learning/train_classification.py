@@ -13,10 +13,10 @@ from torch.utils.data import DataLoader
 from torch.utils.data._utils.collate import default_collate
 from torchvision import transforms
 
-from data.inshop import InShop
-from data.stanford_products import StanfordOnlineProducts
-from data.cars196 import Cars196
-from data.cub200 import Cub200
+from data import InShop
+from data import StanfordOnlineProducts
+from data import Cars196
+from data import Cub200
 from metric_learning.util import SimpleLogger
 from metric_learning.sampler import ClassBalancedBatchSampler
 

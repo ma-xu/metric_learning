@@ -1,7 +1,7 @@
 import csv
 import os.path
 
-from dataset import Dataset
+from .dataset import Dataset
 
 
 class StanfordOnlineProducts(Dataset):

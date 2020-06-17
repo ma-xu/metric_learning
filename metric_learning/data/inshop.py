@@ -2,7 +2,7 @@ import csv
 import os.path
 import random
 
-from dataset import Dataset
+from .dataset import Dataset
 
 
 class InShop(Dataset):
