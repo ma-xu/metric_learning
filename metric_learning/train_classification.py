@@ -69,7 +69,7 @@ def main():
     torch.cuda.set_device(0)
     gpu_device = torch.device('cuda')
 
-    output_directory = os.path.join(args.output, args.dataset, str(args.dim),
+    output_directory = os.path.join(os.getcwd(),args.output, args.dataset, str(args.dim),
                                     '_'.join([args.model_name, str(args.batch_size)]))
     print(output_directory)
     if not os.path.exists(output_directory):
