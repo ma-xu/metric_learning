@@ -120,12 +120,12 @@ class Cub200(Dataset):
 
 if __name__ == '__main__':
 
-    train_set = Cub200('/data1/data/cub200/CUB_200_2011')
+    train_set = Cub200('/home/g1007540910/DATA/MetricLearning/cub200/CUB_200_2011')
     for i in random.sample(range(0,len(train_set)), 5):
         image_id, class_id, instance_id = train_set[i]
         print( "Image  {} has label {}, name {}".format(train_set.image_paths[i], instance_id, train_set.instance_names[instance_id]))
 
-    test_set = Cub200('/data1/data/cub200/CUB_200_2011', train=False)
+    test_set = Cub200('/home/g1007540910/DATA/MetricLearning/cub200/CUB_200_2011', train=False)
     for i in random.sample(range(0,len(test_set)), 5):
         image_id, class_id, instance_id = test_set[i]
         print( "Image  {} has label {}, name {}".format(test_set.image_paths[i], instance_id, test_set.instance_names[instance_id]))
