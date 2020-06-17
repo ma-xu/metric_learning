@@ -256,11 +256,12 @@ def main():
                                                       k=1000, gpu_id=0)
 
 if __name__ == '__main__':
-    try:
-        main()
-    except Exception as e:
-        print(e)
-        traceback.print_exc()
-        os.system("sudo poweroff")
-    print("DONE, FINISHED!!!")
-    os.system("sudo poweroff")
+    # try:
+    #     main()
+    # except Exception as e:
+    #     print(e)
+    #     traceback.print_exc()
+    #     os.system("sudo poweroff")
+    # print("DONE, FINISHED!!!")
+    # os.system("sudo poweroff")
+    main()
