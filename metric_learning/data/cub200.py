@@ -42,12 +42,10 @@ class Cub200(Dataset):
         self.instance_map = {}
 
         for image_id, instance_id in meta_data['id2cls'].items():
-            # print("image_id: {} \t instance_id: {}".format(image_id,instance_id))
 
             if str(instance_id) not in instance_id_to_load:
                 continue
 
-            print(os.path.join(self.image_root_dir, meta_data['id2file'][image_id]))
             self.image_paths.append(os.path.join(self.image_root_dir, meta_data['id2file'][image_id]))
             # consolidate the ids into continuous labels from 0 to num_instance
             if instance_id not in self.instance_map:
