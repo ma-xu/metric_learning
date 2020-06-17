@@ -50,7 +50,7 @@ def parse_args():
     parser.add_argument("--epochs_per_step", type=int, default=4, help="Epochs for learning rate step")
     parser.add_argument("--pretrain_epochs", type=int, default=1, help="Epochs for pretraining")
     parser.add_argument("--num_steps", type=int, default=3, help="Num steps to take")
-    parser.add_argument("--output", type=str, default="/output", help="The output folder for training")
+    parser.add_argument("--output", type=str, default="/home/g1007540910/metric_learning/metric_learning/output", help="The output folder for training")
 
     return parser.parse_args()
 
@@ -69,7 +69,7 @@ def main():
     torch.cuda.set_device(0)
     gpu_device = torch.device('cuda')
 
-    output_directory = os.path.join(os.getcwd(),args.output, args.dataset, str(args.dim),
+    output_directory = os.path.join(args.output, args.dataset, str(args.dim),
                                     '_'.join([args.model_name, str(args.batch_size)]))
     print(output_directory)
     if not os.path.exists(output_directory):
